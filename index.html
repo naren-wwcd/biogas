@@ -3,145 +3,258 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Phenix - Leading innovative solutions for sustainable business growth and environmental management.">
-    <meta name="keywords" content="Phenix, sustainable, innovation, environmental, solutions">
-    <title>Phenix - Innovative Sustainable Solutions</title>
+    <meta name="description" content="Phenix — India's leading biogas plant manufacturer. Turning organic waste into clean renewable energy through anaerobic digestion, OWC machines, and Bio-CNG solutions.">
+    <meta name="keywords" content="biogas plant, organic waste converter, Bio-CNG, anaerobic digestion, sustainable energy India, Phenix">
+    <title>Phenix — Biogas & Green Energy Solutions</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Typing cursor blink */
+        .type-target::after {
+            content: '|';
+            color: var(--g-primary);
+            animation: cursorBlink 0.8s step-end infinite;
+        }
+        @keyframes cursorBlink { 0%,100%{opacity:1} 50%{opacity:0} }
+    </style>
 </head>
 <body>
+
+    <!-- Custom Cursor -->
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
     <!-- Navigation -->
-    <nav class="navbar">
+    <nav class="navbar" id="navbar">
         <div class="container">
             <div class="nav-wrapper">
                 <div class="logo">
-                    <h1>PHENIX</h1>
+                    <div class="logo-icon">🌿</div>
+                    <div>
+                        <h1>PHENIX<span class="logo-sub">Green Energy</span></h1>
+                    </div>
                 </div>
-                <ul class="nav-menu">
-                    <li><a href="#home" class="nav-link">Home</a></li>
-                    <li><a href="#products" class="nav-link">Products</a></li>
-                    <li><a href="#about" class="nav-link">About Us</a></li>
-                    <li><a href="#projects" class="nav-link">Projects</a></li>
-                    <li><a href="#impact" class="nav-link">Impact</a></li>
-                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#home"       class="nav-link">Home</a></li>
+                    <li><a href="#process"    class="nav-link">How It Works</a></li>
+                    <li><a href="#products"   class="nav-link">Products</a></li>
+                    <li><a href="#about"      class="nav-link">About</a></li>
+                    <li><a href="#projects"   class="nav-link">Projects</a></li>
+                    <li><a href="#calculator" class="nav-link">Calculator</a></li>
+                    <li><a href="#contact"    class="nav-link">Contact</a></li>
                 </ul>
-                <div class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                <div class="hamburger" id="hamburger">
+                    <span></span><span></span><span></span>
                 </div>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- ===================== HERO ===================== -->
     <section id="home" class="hero">
+        <!-- Animated biogas bubbles -->
+        <div class="hero-bubbles">
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+        </div>
+
         <div class="container">
             <div class="hero-content">
-                <div class="hero-eyebrow">Sustainable Energy Systems</div>
-                <h2>We Transform Innovation Into Reality</h2>
-                <p>Delivering cutting-edge biogas & waste management solutions for a cleaner, sustainable future</p>
+                <div class="hero-eyebrow">
+                    <span class="dot"></span>
+                    Renewable Biogas Technology
+                </div>
+                <h2 class="hero-title">
+                    <span class="line-1">Waste In.</span>
+                    <span class="line-2"><span class="type-target">Clean Energy Out.</span></span>
+                </h2>
+                <p class="hero-sub">Phenix engineers advanced anaerobic digestion systems that convert organic waste into clean biogas, Bio-CNG, and organic fertilizer — powering a circular, zero-waste economy.</p>
+
                 <div class="hero-metrics">
                     <div class="hero-metric">
-                        <span class="hero-metric-value">500+</span>
+                        <span class="hero-metric-value" data-count="500">0</span>
                         <span class="hero-metric-label">Projects</span>
                     </div>
                     <div class="hero-metric">
-                        <span class="hero-metric-value">25+</span>
-                        <span class="hero-metric-label">Yrs Exp.</span>
+                        <span class="hero-metric-value" data-count="25">0</span>
+                        <span class="hero-metric-label">Yrs Experience</span>
                     </div>
                     <div class="hero-metric">
-                        <span class="hero-metric-value">10K+</span>
+                        <span class="hero-metric-value" data-suffix="K+" data-count="10">0</span>
                         <span class="hero-metric-label">Tons CO₂ Saved</span>
                     </div>
                     <div class="hero-metric">
-                        <span class="hero-metric-value">100%</span>
-                        <span class="hero-metric-label">Satisfaction</span>
+                        <span class="hero-metric-value" data-suffix="%" data-count="100">0</span>
+                        <span class="hero-metric-label">Client Satisfaction</span>
                     </div>
                 </div>
+
                 <div class="hero-cta-group">
-                    <a href="#contact" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Get In Touch</a>
-                    <a href="#products" class="btn btn-outline"><i class="fas fa-th-large"></i> Our Products</a>
+                    <a href="#contact" class="btn btn-primary">
+                        <i class="fas fa-leaf"></i> Get Free Consultation
+                    </a>
+                    <a href="#process" class="btn btn-outline">
+                        <i class="fas fa-play-circle"></i> See How It Works
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Stats Section -->
+    <!-- ===================== STATS ===================== -->
     <section class="stats">
         <div class="container">
-            <div class="stats-grid">
-                <div class="stat-box">
-                    <h3>500+</h3>
-                    <p>Projects Completed</p>
+            <div class="stats-grid stagger">
+                <div class="stat-box reveal">
+                    <span class="stat-icon">♻️</span>
+                    <h3 class="count-up" data-target="15000">0</h3>
+                    <p>Tons Waste Composted</p>
                 </div>
-                <div class="stat-box">
-                    <h3>50+</h3>
-                    <p>Team Members</p>
+                <div class="stat-box reveal">
+                    <span class="stat-icon">⚡</span>
+                    <h3 class="count-up" data-target="500">0</h3>
+                    <p>Biogas Plants Installed</p>
                 </div>
-                <div class="stat-box">
-                    <h3>25+</h3>
-                    <p>Years Experience</p>
+                <div class="stat-box reveal">
+                    <span class="stat-icon">🌍</span>
+                    <h3 class="count-up" data-target="10000">0</h3>
+                    <p>Tons CO₂ Reduced / Year</p>
                 </div>
-                <div class="stat-box">
-                    <h3>100%</h3>
-                    <p>Client Satisfaction</p>
+                <div class="stat-box reveal">
+                    <span class="stat-icon">🏆</span>
+                    <h3 class="count-up" data-target="100">0</h3>
+                    <p>Zero-Waste Events Managed</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Products Section -->
+    <!-- ===================== PROCESS FLOW ===================== -->
+    <section id="process" class="process">
+        <div class="container">
+            <div class="process-header">
+                <span class="section-eyebrow">The Biogas Process</span>
+                <h2 class="section-title">From Waste to Watts</h2>
+                <p class="section-desc">Phenix's proven anaerobic digestion technology converts organic waste through a clean 5-step process into renewable energy and bio-fertilizer.</p>
+            </div>
+
+            <div class="process-flow">
+
+                <div class="process-step reveal" data-step="1">
+                    <div class="process-step-num">
+                        <span class="step-icon">🗑️</span>
+                        <span class="step-number">01</span>
+                    </div>
+                    <h4>Waste Collection</h4>
+                    <p>Organic waste — food scraps, agri residue, sewage sludge — collected and fed into the digester.</p>
+                </div>
+
+                <div class="process-step reveal" data-step="2">
+                    <div class="process-step-num">
+                        <span class="step-icon">🔬</span>
+                        <span class="step-number">02</span>
+                    </div>
+                    <h4>Anaerobic Digestion</h4>
+                    <p>Micro-organisms break down organics in an oxygen-free environment, producing raw biogas (CH₄ + CO₂).</p>
+                </div>
+
+                <div class="process-step reveal" data-step="3">
+                    <div class="process-step-num">
+                        <span class="step-icon">🧪</span>
+                        <span class="step-number">03</span>
+                    </div>
+                    <h4>Gas Purification</h4>
+                    <p>H₂S and CO₂ are scrubbed away, upgrading raw biogas to 95%+ pure biomethane (Bio-CNG grade).</p>
+                </div>
+
+                <div class="process-step reveal" data-step="4">
+                    <div class="process-step-num">
+                        <span class="step-icon">⚡</span>
+                        <span class="step-number">04</span>
+                    </div>
+                    <h4>Energy Generation</h4>
+                    <p>Clean biogas powers generators, burners, or CNG vehicles — replacing fossil fuels completely.</p>
+                </div>
+
+                <div class="process-step reveal" data-step="5">
+                    <div class="process-step-num">
+                        <span class="step-icon">🌱</span>
+                        <span class="step-number">05</span>
+                    </div>
+                    <h4>Bio-Fertilizer</h4>
+                    <p>The digested slurry becomes nutrient-rich bio-fertilizer for farms — closing the circular loop.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== PRODUCTS ===================== -->
     <section id="products" class="products">
         <div class="container">
-            <h2 class="section-title">Our Products & Services</h2>
-            <div class="products-grid">
+            <div class="process-header">
+                <span class="section-eyebrow">What We Build</span>
+                <h2 class="section-title">Products &amp; Services</h2>
+                <p class="section-desc">Hover over each card to explore capabilities, specifications, and real-world applications.</p>
+            </div>
 
-                <!-- Biogas Plant Card -->
-                <div class="product-card">
+            <div class="products-grid stagger">
+
+                <!-- Biogas Plant -->
+                <div class="product-card reveal">
                     <div class="card-inner">
-                        <!-- Front -->
                         <div class="card-front">
-                            <div class="product-icon"><i class="fas fa-fire"></i></div>
+                            <div class="product-icon-wrap green">
+                                <div class="glow-ring"></div>
+                                🔥
+                            </div>
+                            <div class="card-tag">🌿 Core Product</div>
                             <h3>Biogas Plant</h3>
-                            <p>Advanced anaerobic digestion systems that convert organic waste into clean, renewable biogas energy for industrial and community use.</p>
-                            <span class="card-front-hint">⟳ Hover to explore</span>
+                            <p>Advanced anaerobic digestion systems converting organic waste into clean renewable biogas for industrial and community use.</p>
+                            <span class="card-front-hint">⟳ Hover to explore specs</span>
                         </div>
-                        <!-- Back -->
                         <div class="card-back">
-                            <i class="fas fa-fire card-back-icon"></i>
+                            <span class="card-back-icon">🔥</span>
                             <h3>Biogas Plant</h3>
                             <ul>
                                 <li><i class="fas fa-check-circle"></i> 100 kg/day to 100+ tonnes/day capacity</li>
-                                <li><i class="fas fa-check-circle"></i> Converts food waste, agri-waste &amp; sewage sludge</li>
+                                <li><i class="fas fa-check-circle"></i> Processes food waste, agri-waste &amp; sewage sludge</li>
                                 <li><i class="fas fa-check-circle"></i> Produces biogas + bio-fertilizer slurry</li>
-                                <li><i class="fas fa-check-circle"></i> IoT-enabled remote monitoring</li>
-                                <li><i class="fas fa-check-circle"></i> Carbon credit eligible</li>
+                                <li><i class="fas fa-check-circle"></i> IoT-enabled remote monitoring dashboard</li>
+                                <li><i class="fas fa-check-circle"></i> Carbon credit eligible — UNFCCC</li>
                             </ul>
                             <a href="#" class="read-more" onclick="openModal('biogas'); return false;">Full Details →</a>
                         </div>
                     </div>
                 </div>
 
-                <!-- OWC Machine Card -->
-                <div class="product-card">
+                <!-- OWC Machine -->
+                <div class="product-card reveal">
                     <div class="card-inner">
-                        <!-- Front -->
                         <div class="card-front">
-                            <div class="product-icon"><i class="fas fa-recycle"></i></div>
+                            <div class="product-icon-wrap lime">
+                                <div class="glow-ring"></div>
+                                ♻️
+                            </div>
+                            <div class="card-tag">⚡ Fast Composting</div>
                             <h3>OWC Machine</h3>
-                            <p>Organic Waste Converter machines that rapidly decompose organic waste into nutrient-rich compost within 24 hours — zero landfill, zero odour.</p>
-                            <span class="card-front-hint">⟳ Hover to explore</span>
+                            <p>Organic Waste Converter machines that transform kitchen waste into nutrient-rich compost within 24 hours — zero landfill, zero odour.</p>
+                            <span class="card-front-hint">⟳ Hover to explore specs</span>
                         </div>
-                        <!-- Back -->
                         <div class="card-back">
-                            <i class="fas fa-recycle card-back-icon"></i>
+                            <span class="card-back-icon">♻️</span>
                             <h3>OWC Machine</h3>
                             <ul>
                                 <li><i class="fas fa-check-circle"></i> 25 kg/day to 5,000 kg/day capacity</li>
-                                <li><i class="fas fa-check-circle"></i> Compost ready in 24 hours</li>
+                                <li><i class="fas fa-check-circle"></i> Compost ready in just 24 hours</li>
                                 <li><i class="fas fa-check-circle"></i> 90% volume reduction of wet waste</li>
                                 <li><i class="fas fa-check-circle"></i> Fully automatic — plug &amp; play</li>
                                 <li><i class="fas fa-check-circle"></i> BBMP &amp; ULB compliance ready</li>
@@ -151,19 +264,21 @@
                     </div>
                 </div>
 
-                <!-- Bio CNG Plant Card -->
-                <div class="product-card">
+                <!-- Bio CNG Plant -->
+                <div class="product-card reveal">
                     <div class="card-inner">
-                        <!-- Front -->
                         <div class="card-front">
-                            <div class="product-icon"><i class="fas fa-gas-pump"></i></div>
+                            <div class="product-icon-wrap emerald">
+                                <div class="glow-ring"></div>
+                                ⛽
+                            </div>
+                            <div class="card-tag">🚗 Vehicle Fuel</div>
                             <h3>Bio CNG Plant</h3>
-                            <p>State-of-the-art Bio-CNG plants that purify and compress biogas into pipeline-quality compressed natural gas for vehicles and industries.</p>
-                            <span class="card-front-hint">⟳ Hover to explore</span>
+                            <p>State-of-the-art purification and compression systems upgrading raw biogas into pipeline-quality Bio-CNG for vehicles and industry.</p>
+                            <span class="card-front-hint">⟳ Hover to explore specs</span>
                         </div>
-                        <!-- Back -->
                         <div class="card-back">
-                            <i class="fas fa-gas-pump card-back-icon"></i>
+                            <span class="card-back-icon">⛽</span>
                             <h3>Bio CNG Plant</h3>
                             <ul>
                                 <li><i class="fas fa-check-circle"></i> 95%+ methane purity after purification</li>
@@ -177,19 +292,21 @@
                     </div>
                 </div>
 
-                <!-- Waste Management Card -->
-                <div class="product-card">
+                <!-- Waste Management -->
+                <div class="product-card reveal">
                     <div class="card-inner">
-                        <!-- Front -->
                         <div class="card-front">
-                            <div class="product-icon"><i class="fas fa-trash-restore"></i></div>
+                            <div class="product-icon-wrap teal">
+                                <div class="glow-ring"></div>
+                                🌍
+                            </div>
+                            <div class="card-tag">🏙️ End-to-End</div>
                             <h3>Waste Management</h3>
-                            <p>End-to-end sustainable waste management solutions for municipalities, industries, and housing societies — turning waste into valuable resources.</p>
-                            <span class="card-front-hint">⟳ Hover to explore</span>
+                            <p>Comprehensive end-to-end sustainable waste management for municipalities, industries, and societies — turning waste into resources.</p>
+                            <span class="card-front-hint">⟳ Hover to explore specs</span>
                         </div>
-                        <!-- Back -->
                         <div class="card-back">
-                            <i class="fas fa-trash-restore card-back-icon"></i>
+                            <span class="card-back-icon">🌍</span>
                             <h3>Waste Management</h3>
                             <ul>
                                 <li><i class="fas fa-check-circle"></i> Source segregation &amp; awareness programs</li>
@@ -207,12 +324,13 @@
         </div>
     </section>
 
-    <!-- Product Modals -->
+    <!-- ===================== PRODUCT MODALS ===================== -->
+
     <!-- Biogas Plant Modal -->
     <div id="modal-biogas" class="product-modal-overlay" onclick="closeModal('biogas')">
         <div class="product-modal" onclick="event.stopPropagation()">
-            <button class="modal-close" onclick="closeModal('biogas')">&times;</button>
-            <div class="modal-icon"><i class="fas fa-fire"></i></div>
+            <button class="modal-close" onclick="closeModal('biogas')">✕</button>
+            <div class="modal-icon">🔥</div>
             <h2>Biogas Plant</h2>
             <p class="modal-tagline">Turning Organic Waste into Renewable Energy</p>
             <div class="modal-body">
@@ -220,7 +338,7 @@
                 <h4>Key Features</h4>
                 <ul>
                     <li><i class="fas fa-check-circle"></i> Capacity: 100 kg/day to 100+ tonnes/day</li>
-                    <li><i class="fas fa-check-circle"></i> Processes food waste, agri-waste & sewage sludge</li>
+                    <li><i class="fas fa-check-circle"></i> Processes food waste, agri-waste &amp; sewage sludge</li>
                     <li><i class="fas fa-check-circle"></i> Produces biogas + organic slurry (bio-fertilizer)</li>
                     <li><i class="fas fa-check-circle"></i> Reduces greenhouse gas emissions significantly</li>
                     <li><i class="fas fa-check-circle"></i> Modular, scalable design for any site</li>
@@ -231,15 +349,17 @@
                 <h4>Benefits</h4>
                 <p>Zero waste to landfill · Carbon credit eligible · Energy cost savings up to 60% · Compliance with Solid Waste Management Rules</p>
             </div>
-            <a href="#contact" class="btn btn-primary modal-cta" onclick="closeModal('biogas')">Get a Quote</a>
+            <a href="#contact" class="btn btn-primary modal-cta" onclick="closeModal('biogas')">
+                <i class="fas fa-leaf"></i> Get a Free Quote
+            </a>
         </div>
     </div>
 
     <!-- OWC Machine Modal -->
     <div id="modal-owc" class="product-modal-overlay" onclick="closeModal('owc')">
         <div class="product-modal" onclick="event.stopPropagation()">
-            <button class="modal-close" onclick="closeModal('owc')">&times;</button>
-            <div class="modal-icon"><i class="fas fa-recycle"></i></div>
+            <button class="modal-close" onclick="closeModal('owc')">✕</button>
+            <div class="modal-icon">♻️</div>
             <h2>OWC Machine</h2>
             <p class="modal-tagline">Organic Waste Converter — Compost in 24 Hours</p>
             <div class="modal-body">
@@ -249,7 +369,7 @@
                     <li><i class="fas fa-check-circle"></i> Capacity: 25 kg/day to 5,000 kg/day</li>
                     <li><i class="fas fa-check-circle"></i> Fully automatic — plug &amp; play installation</li>
                     <li><i class="fas fa-check-circle"></i> Processes wet waste, fruit/vegetable peels, cooked food</li>
-                    <li><i class="fas fa-check-circle"></i> Output: Dry compost (used as organic fertilizer)</li>
+                    <li><i class="fas fa-check-circle"></i> Output: Dry compost used as organic fertilizer</li>
                     <li><i class="fas fa-check-circle"></i> Volume reduction: up to 90%</li>
                     <li><i class="fas fa-check-circle"></i> Low power consumption, stainless steel body</li>
                 </ul>
@@ -258,15 +378,17 @@
                 <h4>Benefits</h4>
                 <p>Zero wet waste to landfill · OWC-generated compost can be used in gardens or sold · Eligible for BBMP &amp; ULB compliance · Carbon footprint reduction</p>
             </div>
-            <a href="#contact" class="btn btn-primary modal-cta" onclick="closeModal('owc')">Get a Quote</a>
+            <a href="#contact" class="btn btn-primary modal-cta" onclick="closeModal('owc')">
+                <i class="fas fa-leaf"></i> Get a Free Quote
+            </a>
         </div>
     </div>
 
     <!-- Bio CNG Plant Modal -->
     <div id="modal-biocng" class="product-modal-overlay" onclick="closeModal('biocng')">
         <div class="product-modal" onclick="event.stopPropagation()">
-            <button class="modal-close" onclick="closeModal('biocng')">&times;</button>
-            <div class="modal-icon"><i class="fas fa-gas-pump"></i></div>
+            <button class="modal-close" onclick="closeModal('biocng')">✕</button>
+            <div class="modal-icon">⛽</div>
             <h2>Bio CNG Plant</h2>
             <p class="modal-tagline">Purified Biogas — Clean Fuel for a Greener Tomorrow</p>
             <div class="modal-body">
@@ -285,15 +407,17 @@
                 <h4>Benefits</h4>
                 <p>Eligible for SATAT scheme revenue · Carbon credits under UNFCCC · Reduces diesel/petrol dependence · Higher calorific value than CNG</p>
             </div>
-            <a href="#contact" class="btn btn-primary modal-cta" onclick="closeModal('biocng')">Get a Quote</a>
+            <a href="#contact" class="btn btn-primary modal-cta" onclick="closeModal('biocng')">
+                <i class="fas fa-leaf"></i> Get a Free Quote
+            </a>
         </div>
     </div>
 
     <!-- Waste Management Modal -->
     <div id="modal-waste" class="product-modal-overlay" onclick="closeModal('waste')">
         <div class="product-modal" onclick="event.stopPropagation()">
-            <button class="modal-close" onclick="closeModal('waste')">&times;</button>
-            <div class="modal-icon"><i class="fas fa-trash-restore"></i></div>
+            <button class="modal-close" onclick="closeModal('waste')">✕</button>
+            <div class="modal-icon">🌍</div>
             <h2>Waste Management</h2>
             <p class="modal-tagline">End-to-End Sustainable Waste Solutions</p>
             <div class="modal-body">
@@ -310,200 +434,404 @@
                 <h4>Sectors Served</h4>
                 <p>Municipal corporations, gated communities, IT parks, hospitals, educational campuses, wedding &amp; corporate events, and industrial estates.</p>
                 <h4>Impact</h4>
-                <p>15,000+ tons of waste composted · 100+ zero-waste events · 15,000+ Nukkad Nataks for awareness · BBMP &amp; ULB compliance guaranteed</p>
+                <p>15,000+ tons of waste composted · 100+ zero-waste events · 15,000+ awareness programs · BBMP &amp; ULB compliance guaranteed</p>
             </div>
-            <a href="#contact" class="btn btn-primary modal-cta" onclick="closeModal('waste')">Get a Quote</a>
+            <a href="#contact" class="btn btn-primary modal-cta" onclick="closeModal('waste')">
+                <i class="fas fa-leaf"></i> Get a Free Quote
+            </a>
         </div>
     </div>
 
-    <!-- About Section -->
+    <!-- ===================== ABOUT ===================== -->
     <section id="about" class="about">
         <div class="container">
             <div class="about-content">
-                <div class="about-text">
-                    <h2>About Phenix</h2>
-                    <p>Phenix is a leading innovator in sustainable solutions and advanced technology implementation. With over 25 years of industry experience, we have established ourselves as a trusted partner for businesses seeking transformation.</p>
-                    <p>Our commitment to excellence, combined with cutting-edge technology and a dedicated team of experts, ensures that every project delivers measurable results and lasting value.</p>
+                <div class="about-text reveal-left">
+                    <span class="section-eyebrow">Our Story</span>
+                    <h2>25 Years of <span>Green Innovation</span></h2>
+                    <p>Phenix is India's most trusted biogas technology company. Since 1999, we've been engineering sustainable solutions that close the loop between waste generation and clean energy production — protecting communities and the planet.</p>
+                    <p>From small apartment-scale OWC machines to large-scale municipal biogas plants, our expertise spans the entire organic waste value chain with unmatched quality and reliability.</p>
+
                     <div class="about-highlights">
                         <div class="highlight">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Industry Leading Expertise</span>
+                            <span class="highlight-icon">🏭</span>
+                            <span>Industry-Leading Expertise</span>
                         </div>
                         <div class="highlight">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Innovative Solutions</span>
+                            <span class="highlight-icon">💡</span>
+                            <span>IoT &amp; Smart Monitoring</span>
                         </div>
                         <div class="highlight">
-                            <i class="fas fa-check-circle"></i>
+                            <span class="highlight-icon">📋</span>
                             <span>Proven Track Record</span>
                         </div>
                         <div class="highlight">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Customer Focused</span>
+                            <span class="highlight-icon">🤝</span>
+                            <span>End-to-End Support</span>
                         </div>
+                        <div class="highlight">
+                            <span class="highlight-icon">🌿</span>
+                            <span>Zero Waste Philosophy</span>
+                        </div>
+                        <div class="highlight">
+                            <span class="highlight-icon">⚡</span>
+                            <span>Carbon Credit Eligible</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Animated organic diagram -->
+                <div class="about-visual reveal-right">
+                    <div class="about-diagram">
+                        <div class="diagram-ring ring-1"></div>
+                        <div class="diagram-ring ring-2"></div>
+                        <div class="diagram-ring ring-3"></div>
+                        <div class="diagram-center">🌿</div>
+                        <!-- Orbiting nodes placed via JS -->
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Projects Section -->
+    <!-- ===================== PROJECTS ===================== -->
     <section id="projects" class="projects">
         <div class="container">
-            <h2 class="section-title">Featured Projects</h2>
+            <div class="process-header">
+                <span class="section-eyebrow">Featured Work</span>
+                <h2 class="section-title">Real-World Impact</h2>
+                <p class="section-desc">Every project is a step toward a greener planet. Here are some of our landmark installations.</p>
+            </div>
+
             <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image"></div>
+
+                <div class="project-card reveal">
+                    <div class="project-image">
+                        <div class="project-image-icon">🔥</div>
+                        <div class="project-image-overlay"></div>
+                        <span class="project-badge">Biogas Plant</span>
+                    </div>
                     <div class="project-info">
-                        <h3>Sustainable Infrastructure</h3>
-                        <p>Implemented sustainable infrastructure solutions for major industrial client reducing carbon footprint by 40%.</p>
+                        <h3>Municipal Biogas Plant — Bangalore</h3>
+                        <p>5-tonne/day biogas plant converting wet market waste into 300 units/day of electricity for street lighting and water pumps.</p>
+                        <div class="project-meta">
+                            <span><i class="fas fa-bolt"></i> 300 kWh/day</span>
+                            <span><i class="fas fa-leaf"></i> 40% CO₂ cut</span>
+                            <span><i class="fas fa-clock"></i> 2024</span>
+                        </div>
                     </div>
                 </div>
-                <div class="project-card">
-                    <div class="project-image"></div>
+
+                <div class="project-card reveal">
+                    <div class="project-image" style="background: linear-gradient(135deg,#0a1a0a,#04130a);">
+                        <div class="project-image-icon">♻️</div>
+                        <div class="project-image-overlay"></div>
+                        <span class="project-badge">OWC Install</span>
+                    </div>
                     <div class="project-info">
-                        <h3>Technology Integration</h3>
-                        <p>Successfully integrated advanced technology systems across multiple facilities improving operational efficiency.</p>
+                        <h3>Gated Community Network — Pune</h3>
+                        <p>Installed 12 OWC units across a 1,200-flat residential complex, achieving 100% on-site wet waste processing with zero landfill output.</p>
+                        <div class="project-meta">
+                            <span><i class="fas fa-home"></i> 1,200 Flats</span>
+                            <span><i class="fas fa-recycle"></i> 90% reduction</span>
+                            <span><i class="fas fa-clock"></i> 2023</span>
+                        </div>
                     </div>
                 </div>
-                <div class="project-card">
-                    <div class="project-image"></div>
+
+                <div class="project-card reveal">
+                    <div class="project-image" style="background: linear-gradient(135deg,#081a10,#030d08);">
+                        <div class="project-image-icon">⛽</div>
+                        <div class="project-image-overlay"></div>
+                        <span class="project-badge">Bio-CNG</span>
+                    </div>
                     <div class="project-info">
-                        <h3>Green Innovation</h3>
-                        <p>Developed innovative green energy solutions generating renewable power and reducing operational costs.</p>
+                        <h3>Dairy Farm Bio-CNG — Haryana</h3>
+                        <p>Converted 50,000 L/day of cattle slurry into Bio-CNG fueling an entire fleet of 20 farm vehicles — saving ₹40 lakh/year on diesel.</p>
+                        <div class="project-meta">
+                            <span><i class="fas fa-truck"></i> 20 Vehicles</span>
+                            <span><i class="fas fa-rupee-sign"></i> ₹40L saved/yr</span>
+                            <span><i class="fas fa-clock"></i> 2025</span>
+                        </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
 
-    <!-- Impact Section -->
+    <!-- ===================== IMPACT ===================== -->
     <section id="impact" class="impact">
         <div class="container">
-            <h2 class="section-title">Our Impact</h2>
+            <div class="process-header">
+                <span class="section-eyebrow">Our Impact</span>
+                <h2 class="section-title">Numbers That Matter</h2>
+                <p class="section-desc">Our work translates directly into environmental health, community welfare, and measurable economic savings.</p>
+            </div>
+
             <div class="impact-grid">
-                <div class="impact-item">
-                    <i class="fas fa-industry"></i>
+                <div class="impact-item reveal">
+                    <div class="impact-icon-wrap">🏭</div>
                     <h3>Industrial Partnerships</h3>
-                    <p>Collaborated with 200+ industrial partners worldwide</p>
+                    <p>Collaborated with 200+ industrial partners across food, agriculture, dairy, and municipal sectors nationwide.</p>
                 </div>
-                <div class="impact-item">
-                    <i class="fas fa-users"></i>
+                <div class="impact-item reveal">
+                    <div class="impact-icon-wrap">👩‍🌾</div>
                     <h3>Community Development</h3>
-                    <p>Supported 50+ community development initiatives</p>
+                    <p>Supported 50+ community initiatives, creating green jobs and training 15,000+ sanitation workers through Nukkad Nataks.</p>
                 </div>
-                <div class="impact-item">
-                    <i class="fas fa-leaf"></i>
+                <div class="impact-item reveal">
+                    <div class="impact-icon-wrap">🌱</div>
                     <h3>Environmental Impact</h3>
-                    <p>Reduced carbon emissions by 10,000+ tons annually</p>
+                    <p>Reduced carbon emissions by 10,000+ tons annually — equivalent to planting over 450,000 trees every year.</p>
                 </div>
-                <div class="impact-item">
-                    <i class="fas fa-award"></i>
+                <div class="impact-item reveal">
+                    <div class="impact-icon-wrap">🏆</div>
                     <h3>Industry Recognition</h3>
-                    <p>Won 15+ prestigious industry awards</p>
+                    <p>Recipient of 15+ prestigious industry awards for innovation, sustainability, and excellence in biogas technology.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Why Choose Us -->
+    <!-- ===================== WHY CHOOSE US ===================== -->
     <section class="why-choose">
         <div class="container">
-            <h2 class="section-title">Why Choose Phenix</h2>
+            <div class="process-header">
+                <span class="section-eyebrow">Why Phenix</span>
+                <h2 class="section-title">The Phenix Advantage</h2>
+                <p class="section-desc">We don't just install equipment — we build long-term partnerships in your journey toward sustainability.</p>
+            </div>
             <div class="benefits-grid">
-                <div class="benefit-card">
-                    <h3>Quality Assurance</h3>
-                    <p>We maintain the highest standards of quality in all our products and services, ensuring excellence at every step.</p>
+                <div class="benefit-card reveal">
+                    <div class="benefit-number">01</div>
+                    <span class="benefit-icon">🔬</span>
+                    <h3>Proven Technology</h3>
+                    <p>25+ years of hands-on R&amp;D in anaerobic digestion means our systems are battle-tested across every Indian climate and waste profile.</p>
                 </div>
-                <div class="benefit-card">
-                    <h3>Customized Solutions</h3>
-                    <p>Every client is unique. We design tailored solutions that perfectly fit your specific requirements and goals.</p>
+                <div class="benefit-card reveal">
+                    <div class="benefit-number">02</div>
+                    <span class="benefit-icon">📡</span>
+                    <h3>IoT Smart Monitoring</h3>
+                    <p>Real-time remote dashboards let you track gas production, temperature, pH, and system health from anywhere in the world.</p>
                 </div>
-                <div class="benefit-card">
-                    <h3>Expert Team</h3>
-                    <p>Our experienced professionals bring decades of combined expertise to solve your most challenging problems.</p>
+                <div class="benefit-card reveal">
+                    <div class="benefit-number">03</div>
+                    <span class="benefit-icon">📐</span>
+                    <h3>Custom Engineering</h3>
+                    <p>Every plant is uniquely designed and sized for your specific waste streams, site constraints, and energy objectives.</p>
                 </div>
-                <div class="benefit-card">
-                    <h3>24/7 Support</h3>
-                    <p>Round-the-clock customer support ensures your operations run smoothly without interruption.</p>
+                <div class="benefit-card reveal">
+                    <div class="benefit-number">04</div>
+                    <span class="benefit-icon">🤝</span>
+                    <h3>End-to-End Support</h3>
+                    <p>From feasibility study to commissioning to annual maintenance — Phenix is your single partner for the entire plant lifecycle.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- ===================== BIOGAS CALCULATOR ===================== -->
+    <section id="calculator" class="calculator">
+        <div class="container">
+            <div class="process-header">
+                <span class="section-eyebrow">Interactive Tool</span>
+                <h2 class="section-title">Biogas Potential Calculator</h2>
+                <p class="section-desc">Estimate how much biogas, energy, and CO₂ savings your organic waste can generate. Move the sliders to see real-time results.</p>
+            </div>
+
+            <div class="calculator-wrapper">
+                <div class="calc-header">
+                    <div class="calc-header-icon">🧮</div>
+                    <div>
+                        <h3>Estimate Your Biogas Output</h3>
+                        <p>Adjust the inputs below to get a quick estimate for your facility.</p>
+                    </div>
+                </div>
+                <div class="calc-body">
+                    <div class="calc-inputs">
+                        <div class="calc-field">
+                            <label>
+                                Organic Waste Input
+                                <span id="wasteVal">500 kg/day</span>
+                            </label>
+                            <input type="range" id="wasteSlider" class="calc-slider" min="50" max="5000" step="50" value="500">
+                        </div>
+                        <div class="calc-field">
+                            <label>
+                                Waste Moisture Content
+                                <span id="moistureVal">70%</span>
+                            </label>
+                            <input type="range" id="moistureSlider" class="calc-slider" min="40" max="90" step="5" value="70">
+                        </div>
+                        <div class="calc-field">
+                            <label>
+                                Waste Type
+                                <span id="typeVal">Mixed Food</span>
+                            </label>
+                            <input type="range" id="typeSlider" class="calc-slider" min="1" max="4" step="1" value="2">
+                            <div style="display:flex;justify-content:space-between;font-size:11px;color:var(--text-muted);margin-top:5px;">
+                                <span>Agri</span><span>Food</span><span>Mixed</span><span>Sludge</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="calc-results">
+                        <div class="calc-result-card">
+                            <div class="calc-result-icon">🔥</div>
+                            <div class="calc-result-info">
+                                <label>Daily Biogas Output</label>
+                                <span class="calc-result-value" id="biogasOut">0</span>
+                                <span class="calc-result-unit">m³/day</span>
+                            </div>
+                        </div>
+                        <div class="calc-result-card">
+                            <div class="calc-result-icon">⚡</div>
+                            <div class="calc-result-info">
+                                <label>Electricity Equivalent</label>
+                                <span class="calc-result-value" id="elecOut">0</span>
+                                <span class="calc-result-unit">kWh/day</span>
+                            </div>
+                        </div>
+                        <div class="calc-result-card">
+                            <div class="calc-result-icon">🌱</div>
+                            <div class="calc-result-info">
+                                <label>CO₂ Offset</label>
+                                <span class="calc-result-value" id="co2Out">0</span>
+                                <span class="calc-result-unit">kg CO₂/day</span>
+                            </div>
+                        </div>
+                        <div class="calc-result-card">
+                            <div class="calc-result-icon">💰</div>
+                            <div class="calc-result-info">
+                                <label>Est. Annual Savings</label>
+                                <span class="calc-result-value" id="savingsOut">₹0</span>
+                                <span class="calc-result-unit">lakhs/yr</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== CONTACT ===================== -->
     <section id="contact" class="contact">
         <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
+            <div class="process-header">
+                <span class="section-eyebrow">Get In Touch</span>
+                <h2 class="section-title">Start Your Green Journey</h2>
+                <p class="section-desc">Tell us about your waste and we'll design the perfect solution. Free feasibility assessment included.</p>
+            </div>
+
             <div class="contact-wrapper">
-                <div class="contact-form">
-                    <form>
-                        <div class="form-group">
-                            <input type="text" placeholder="Full Name" required>
+                <div class="contact-form reveal-left">
+                    <h3>📋 Request a Free Consultation</h3>
+                    <form id="contactForm" novalidate>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="fname">Full Name *</label>
+                                <input type="text" id="fname" placeholder="Your full name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="femail">Email Address *</label>
+                                <input type="email" id="femail" placeholder="you@company.com" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="fphone">Phone Number *</label>
+                                <input type="tel" id="fphone" placeholder="+91-XXXXX-XXXXX" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="fcompany">Organization</label>
+                                <input type="text" id="fcompany" placeholder="Company / Municipality">
+                            </div>
                         </div>
                         <div class="form-group">
-                            <input type="email" placeholder="Email Address" required>
+                            <label for="fservice">Service Interested In *</label>
+                            <select id="fservice" required>
+                                <option value="">— Select a product —</option>
+                                <option value="biogas">Biogas Plant</option>
+                                <option value="owc">OWC Machine</option>
+                                <option value="biocng">Bio CNG Plant</option>
+                                <option value="waste">Waste Management</option>
+                                <option value="other">Other / Consulting</option>
+                            </select>
                         </div>
                         <div class="form-group">
-                            <input type="tel" placeholder="Phone Number" required>
+                            <label for="fmessage">Tell Us About Your Waste *</label>
+                            <textarea id="fmessage" placeholder="Describe your waste type, daily quantity, location, and any specific requirements..." required></textarea>
                         </div>
-                        <div class="form-group">
-                            <input type="text" placeholder="Company Name">
-                        </div>
-                        <div class="form-group">
-                            <textarea placeholder="Message" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Send Message</button>
+                        <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
                     </form>
                 </div>
-                <div class="contact-info">
+
+                <div class="contact-info reveal-right">
                     <h3>Contact Information</h3>
+
                     <div class="info-box">
-                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="info-box-icon"><i class="fas fa-map-marker-alt"></i></div>
                         <div>
                             <h4>Address</h4>
-                            <p>123 Innovation Street<br>Tech City, TC 12345<br>India</p>
+                            <p>123 Green Innovation Park<br>Bangalore, Karnataka 560001<br>India</p>
                         </div>
                     </div>
                     <div class="info-box">
-                        <i class="fas fa-phone"></i>
+                        <div class="info-box-icon"><i class="fas fa-phone"></i></div>
                         <div>
                             <h4>Phone</h4>
                             <p>+91-XXXX-XXXX-XXXX</p>
                         </div>
                     </div>
                     <div class="info-box">
-                        <i class="fas fa-envelope"></i>
+                        <div class="info-box-icon"><i class="fas fa-envelope"></i></div>
                         <div>
                             <h4>Email</h4>
-                            <p>contact@phenix.com</p>
+                            <p>contact@phenixbiogas.com</p>
                         </div>
                     </div>
+                    <div class="info-box">
+                        <div class="info-box-icon"><i class="fas fa-clock"></i></div>
+                        <div>
+                            <h4>Working Hours</h4>
+                            <p>Mon–Sat: 9:00 AM – 6:00 PM IST<br>Emergency support: 24/7</p>
+                        </div>
+                    </div>
+
                     <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- ===================== FOOTER ===================== -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-section">
+                <div class="footer-section footer-brand">
                     <h4>PHENIX</h4>
-                    <p>Transforming businesses through innovation and sustainability.</p>
+                    <p>Transforming organic waste into clean energy and circular resources since 1999. Building a greener, zero-waste India — one biogas plant at a time.</p>
+                    <div class="footer-badge">
+                        🌿 Carbon Neutral Certified
+                    </div>
                 </div>
                 <div class="footer-section">
                     <h4>Quick Links</h4>
                     <ul>
                         <li><a href="#home">Home</a></li>
+                        <li><a href="#process">How It Works</a></li>
                         <li><a href="#products">Products</a></li>
-                        <li><a href="#about">About</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#projects">Projects</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
@@ -514,6 +842,7 @@
                         <li><a href="#" onclick="openModal('owc'); return false;">OWC Machine</a></li>
                         <li><a href="#" onclick="openModal('biocng'); return false;">Bio CNG Plant</a></li>
                         <li><a href="#" onclick="openModal('waste'); return false;">Waste Management</a></li>
+                        <li><a href="#calculator">Biogas Calculator</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
@@ -523,11 +852,15 @@
                         <a href="#"><i class="fab fa-twitter"></i></a>
                         <a href="#"><i class="fab fa-linkedin-in"></i></a>
                         <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Phenix. All rights reserved.</p>
+                <p>© 2026 Phenix Biogas Solutions. All rights reserved.</p>
+                <div class="footer-tagline">
+                    Made with <span class="leaf">🌿</span> for a greener planet
+                </div>
             </div>
         </div>
     </footer>
