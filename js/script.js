@@ -64,12 +64,16 @@ function showAlert(message, type) {
         position: fixed;
         top: 20px;
         right: 20px;
-        padding: 15px 20px;
-        background: ${type === 'success' ? '#2ecc71' : '#e74c3c'};
+        padding: 15px 22px;
+        background: ${type === 'success' ? 'linear-gradient(135deg,#0088ff,#0057c7)' : 'linear-gradient(135deg,#e74c3c,#c0392b)'};
         color: white;
-        border-radius: 5px;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-        z-index: 1000;
+        border-radius: 10px;
+        border: 1px solid ${type === 'success' ? 'rgba(0,212,255,0.3)' : 'rgba(231,76,60,0.5)'};
+        box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+        z-index: 10000;
+        font-family: Inter, sans-serif;
+        font-size: 14px;
+        font-weight: 500;
         animation: slideIn 0.3s ease;
     `;
 
@@ -164,8 +168,9 @@ style.textContent = `
     }
 
     .nav-link.active {
-        color: #2ecc71;
-        border-bottom: 2px solid #2ecc71;
+        color: #00d4ff !important;
+        background: rgba(0,212,255,0.08);
+        border-radius: 6px;
     }
 
     .alert {
